@@ -2,7 +2,7 @@
 
 # Identificar hosts abertos na rede
 
-if [ "$1" == "" && "$2" == ""]
+if [ "$1" == "" ]
 then
     echo "Digite um IP e em seguida a porta"
     echo "Exemplo: ./scannet.sh 192.168.1.105 80"
