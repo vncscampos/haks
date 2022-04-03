@@ -1,14 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 #-*- coding: utf-8 -*-
 
 import socket
 
-ip = raw_input("Digite o IP: ")
+ip = input("Digite o IP: ")
 
-print "Porta   Serviço"
+print("Porta   Serviço")
 for port in range(1, 65535):
 	mysocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	if(mysocket.connect_ex((ip, port)) == 0):
 		banner = mysocket.recv(1024)
-		print port, "    ", banner
+		print (port, "    ", banner)
 		mysocket.close()
