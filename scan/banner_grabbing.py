@@ -11,4 +11,4 @@ for port in range(1, 65535):
 	if(mysocket.connect_ex((ip, port)) == 0):
 		banner = mysocket.recv(1024)
 		print (port, "    ", banner)
-		mysocket.close()
+	mysocket.close()
